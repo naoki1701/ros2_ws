@@ -14,6 +14,8 @@ jobs:
          rosdep install -i --from-path src --rosdistro humble -y
          pwd
          ls
+         sudo apt-get update
+         sudo apt-get install tree
          tree 
          bash -xv ./src/mypkg/test/test.bash /root
 
