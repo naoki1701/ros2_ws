@@ -9,9 +9,10 @@ jobs:
      - name: build and test
        run: |
          rsync -av ./ /root/ros2_ws/src/mypkg/
-         cd /root/ros2_ws
+         cd /root/ros2_ws/src/mypkg/test
          rosdep update
          rosdep install -i --from-path src --rosdistro humble -y
          pwd
-         bash -xv /root/ros2_ws/src/mypkg/test/test.bash
+         ls
+         bash -xv ./test.bash
 
